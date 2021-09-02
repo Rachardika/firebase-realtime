@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+
+        <form id="add-cafe-form">
+            <input type="text" name="name" placeholder="Cafe name">
+            <input type="text" name="city" placeholder="Cafe city">
+            <button>Add Cafe</button>
+        </form>
+        <ul id="cafe-list"></ul>
+
+    </div>
+
+
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyASxuUX7V1cxzW8PfnD0HPILTYOo9_m1Xg",
+            authDomain: "celsky-firestore-tut.firebaseapp.com",
+            projectId: "celsky-firestore-tut",
+            storageBucket: "celsky-firestore-tut.appspot.com",
+            messagingSenderId: "820069105073",
+            appId: "1:820069105073:web:9974bfff3fe5e211ca1190",
+            measurementId: "G-PB9N309VX7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        db.settings({timestampInSnapshots: true});
+        firebase.analytics();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
